@@ -15,12 +15,12 @@ function f = Chan_Vese(phi, Image, ImageF, eps, lambda1, lambda2, Iter, dt)
 figure
 It = phi;
 for i=1:Iter
-    He=(phi>=0); % zone in cui phi è positivo
-    Hi=(phi<0);  % zone in cui phi è negativo
-    I0i=ImageF.*Hi; % zone dell'immagine in cui phi è positivo
-    I0e=ImageF.*He; % zone dell'immagine in cui phi è positivo
-    c1=sum(sum(I0i))./(sum(sum(Hi))); % media dei valori nelle zone di phi<0 cioè interne al contorno
-    c2=sum(sum(I0e))./(sum(sum(He))); % media dei valori nelle zone di phi>0 cioè esterne al contorno
+    He=(phi>=0); % zones in which phi is positive
+    Hi=(phi<0);  % zones in which phi is negative
+    I0i=ImageF.*Hi; % image zones in which phi is positive
+    I0e=ImageF.*He; % image zones in which phi is negative
+    c1=sum(sum(I0i))./(sum(sum(Hi))); % means of velues where phi<0 (inside the boundary)
+    c2=sum(sum(I0e))./(sum(sum(He))); % means of velues where phi>0 (outside the boundary)
 
     phi = phi + dt.*(eps*divergence(D_x(phi)./G(phi), D_y(phi)./G(phi))...
         - lambda1*(ImageF-c1).^2 + lambda2*(ImageF-c2).^2);
