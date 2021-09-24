@@ -12,9 +12,9 @@ This repo contains
      - _G.m_ and _KG.m_ implement respectively the gradient module and the gradient module-curvature product - used in _Chan-Vese.m_;
      - _Chan-Vese.m_ implement the Chan-Vese algorithm
 
-The main script apply Chan-Vese algorithm to segment the brighter areas, useful to:
 
- a) segment the glioblastoma
- 
- b) mask the image and apply again Chan-Vese to segment the gray matter
+The main script apply Chan-Vese algorithm to segment the brighter areas, useful to: 
+- a) segment the glioblastoma 
+- b) mask the image and apply again Chan-Vese to segment the gray matter
+
 
