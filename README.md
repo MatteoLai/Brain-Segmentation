@@ -13,6 +13,8 @@ This repo contains
      - _Chan-Vese.m_ implement the Chan-Vese algorithm
 
 The main script apply Chan-Vese algorithm to segment the brighter areas, useful to:
+
  a) segment the glioblastoma
+ 
  b) mask the image and apply again Chan-Vese to segment the gray matter
 
